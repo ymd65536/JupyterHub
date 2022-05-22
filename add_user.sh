@@ -5,6 +5,6 @@
 username="${1}"
 
 # some operation
-sudo useradd -p "password" -d /home/$username -G ec2-user $username
+sudo useradd -p "password" -d /home/$username -G jupyter $username
 sudo mkdir /home/$username/notebooks
 sudo chmod 777 /home/$username/notebooks
