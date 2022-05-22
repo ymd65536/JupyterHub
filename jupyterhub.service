@@ -1,0 +1,11 @@
+[Unit]
+Description=Jupyterhub
+
+[Service]
+User=root
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/bin/sudo:/usr/bin:/jupyter/.nvm/versions/node/v14.19.3/bin"
+ExecStart=/usr/local/bin/jupyterhub --url 0.0.0.0 -f /opt/jupyterhub/jupyterhub_config.py
+WorkingDirectory=/opt/jupyterhub
+
+[Install]
+WantedBy=multi-user.target
